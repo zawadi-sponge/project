@@ -16,9 +16,20 @@
             <div class="first">
                 <h2 id="drama-name">Alchemy of Souls</h2>
                 <img id="uk" src="/Images/image 1 (1).jpg" alt="">
-                <div class="likes">
-                    <span id="countLikes">0 likes</span>
-                    <button id="likeButton">like</button>
+                <div class="wrapper">
+                     <div class="likes">
+                    <i onclick="count1()" id="button">♥</i>
+                    <br>
+                    <input id="likeCount" type="number" value="0">
+                </div>
+                <div class="dislikes">
+                    <i onclick="count2()" id="button">NO</i>
+                    <br>
+                    <input id="dislikeCount" type="number" value="0">
+                </div>
+                <div class="subscribe"> 
+                    <button id="sub">SUBSCRIBE</button>
+                </div>
                 </div>
                 <p>Laced with intricacy, detail, and dedicated world building, 
                     Alchemy of Souls has all the hallmarks of a noteworthy, 
@@ -34,14 +45,18 @@
                       confident man. He’s aided largely by Mu-deok, who houses the soul of the former assassin Naksu.
                        The two have an unconventional relationship that evolves into so much more, and allows for both to grow into intrinsically better people.On the opposite side of things, Jin Mu is the central antagonist. A cynical assistant Gwanju that seeks to control Daeho through outlawed sorcery, all while manipulating those around him, he’s the typically astute, hard-to-beat foil for the proverbial good guys, and instantly detestable. Add to that a stacked support cast which ranges from swindlers to soul shifting Queens, and again it’s clear just how layered Alchemy of Souls is.
                    
-                    </p>
-                 <form id="views" action="">
-                    <textarea name="Add your coments" id="comments" cols="70" rows="10" placeholder="Add your review here"></textarea>
-                    <div class="btn">
-                        <input type="submit" value="post">
-                        <button id="cancel">Cancel</button>
-                    </div>
-                 </form>
+                    </p><br /><br />
+                   <div class="form">
+                    <form >
+                        <textarea id="input" placeholder="Add your review here..."></textarea>
+                     </form><br /><br />
+                    <button type="button" name="button" id="submit">Submit review</button><br /><br />
+                   <button type="button" name="button" id="cancel">Cancel</button>
+                   <div class="delete-form">
+                    <div id="box"></div>
+                    <button type="button" name="button" id="delete">Delete</button>
+                   </div>
+                   </div>
                 </div>
         <div class="others">
                 <img id="queen" src="/Images/image 1 (4).jpg" alt="Mr Queen">
