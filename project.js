@@ -29,9 +29,25 @@ fetch('https://streaming-availability.p.rapidapi.com/search/basic?country=us&ser
 const text = document.getElementById('input');
 const btn = document.getElementById('submit');
 const result = document.getElementById('box');
+const btn1 = document.getElementById('cancel');
+const btn2 = document.getElementById('delete');
+
+
 
 function output () {
     result.innerHTML = text.value;
 }
 
 btn.addEventListener('click',output)
+
+function can () {
+    text.innerHTML = '';
+}
+
+btn1.addEventListener('click',can)
+
+function del () {
+       result.innerHTML = '';
+}
+
+btn2.addEventListener('click',del)
