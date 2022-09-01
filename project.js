@@ -1,4 +1,4 @@
-/*const options = {
+const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '23ef58c331msh68bf74e3a440d82p126104jsn83af19d76ef0',
@@ -9,7 +9,7 @@
 fetch('https://streaming-availability.p.rapidapi.com/search/basic?country=us&service=netflix&type=movie&genre=18&page=1&output_language=en&language=en', options)
 	.then(response => response.json())
 	.then(response => console.log(response))
-	.catch(err => console.error(err));*/
+	.catch(err => console.error(err));
     
 
    const likeCount = document.querySelector('#likeCount');
@@ -31,6 +31,7 @@ const btn = document.getElementById('submit');
 const result = document.getElementById('box');
 const btn1 = document.getElementById('cancel');
 const btn2 = document.getElementById('delete');
+const btn3 = document.getElementById('sub')
 
 
 
@@ -46,8 +47,14 @@ function can () {
 
 btn1.addEventListener('click',can)
 
+function sub () {
+    alert("You have successfully subscribred to the webpage");
+}
+
+btn3.addEventListener('click',sub)
+
 function del () {
-       result.innerHTML = '';
+           result.innerHTML = '';
 }
 
 btn2.addEventListener('click',del)
