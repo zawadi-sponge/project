@@ -15,7 +15,8 @@
         <div class="image-box">
             <div class="first">
                 <h2 id="drama-name">Alchemy of Souls</h2>
-                <img id="uk" src="/Images/image 1 (1).jpg" alt="">
+                <img onmouseover="setNewImage()" onmouseout="setOldImage()"
+                 id="uk" src="/Images/image 1 (1).jpg" alt="">
                 <div class="wrapper">
                      <div class="likes">
                     <i onclick="count1()" id="button">♥</i>
@@ -50,11 +51,11 @@
                     <form >
                         <textarea id="input" placeholder="Add your review here..."></textarea>
                      </form><br /><br />
-                    <button type="button" name="button" id="submit">Submit review</button><br /><br />
+                    <button onclick="fadeIn()" type="button" name="button" id="submit">Submit review</button><br /><br />
                    <button type="button" name="button" id="cancel">Cancel</button>
                    <div class="delete-form">
                     <div id="box"></div>
-                    <button type="button" name="button" id="delete">Delete</button>
+                    <button onclick="fadeOut()" type="button" name="button" id="delete">Delete</button>
                    </div>
                    </div>
                 </div>

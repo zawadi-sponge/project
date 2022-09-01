@@ -11,6 +11,15 @@ fetch('https://streaming-availability.p.rapidapi.com/search/basic?country=us&ser
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
     
+function setNewImage() {
+  document.getElementById('uk').src ="/Images/image 2 (1).jpg";
+
+}
+
+function setOldImage() {
+    document.getElementById('uk').src ="/Images/image 1 (1).jpg";
+}
+
 
    const likeCount = document.querySelector('#likeCount');
    const dislikeCount = document.querySelector('#dislikeCount');
@@ -22,10 +31,44 @@ fetch('https://streaming-availability.p.rapidapi.com/search/basic?country=us&ser
    function count2(){
     dislikeCount.value = parseInt(dislikeCount.value) + 1;
    }
-   count1()
-   count2()
-
   
+
+   let opacity = 0;
+   let timer = 0;
+
+   function fadeIn() {
+    timer = setInterval(show,200)
+  }
+  
+  function show() {
+    let box = document.getElementById('box');
+
+    opacity = Number(window.getComputedStyle(box).getPropertyValue("opacity"));
+
+    if(opacity <= 0){
+        opacity = opacity + 0.4;
+        box.style.opacity = opacity;
+    }
+    else{clearInterval(timer)};
+  }
+
+  function fadeOut() {
+    timer = setInterval(hide,20)
+  }
+
+  function hide(){
+    let box = document.getElementById('box');
+
+    opacity = Number(window.getComputedStyle(box).getPropertyValue("opacity"));
+
+    if(opacity > 0){
+        opacity = opacity - 0.1;
+        box.style.opacity = opacity;
+    }
+    else{clearInterval(timer)};
+  }
+  
+
 const text = document.getElementById('input');
 const btn = document.getElementById('submit');
 const result = document.getElementById('box');
