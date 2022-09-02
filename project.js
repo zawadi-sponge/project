@@ -101,3 +101,5 @@ function del () {
 }
 
 btn2.addEventListener('click',del)
+
+document.addEventListener('DOMContentLoaded', initialization);
